@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTutorialConsole", "BlazorTutorialConsole\BlazorTutorialConsole.csproj", "{AEA0B07B-4AC7-498B-962E-83BC8ED63980}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTutorialGUI", "BlazorTutorialGUI\BlazorTutorialGUI.csproj", "{3D174EC2-E042-4895-9B27-58C767384339}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEA0B07B-4AC7-498B-962E-83BC8ED63980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA0B07B-4AC7-498B-962E-83BC8ED63980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA0B07B-4AC7-498B-962E-83BC8ED63980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA0B07B-4AC7-498B-962E-83BC8ED63980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D174EC2-E042-4895-9B27-58C767384339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D174EC2-E042-4895-9B27-58C767384339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D174EC2-E042-4895-9B27-58C767384339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D174EC2-E042-4895-9B27-58C767384339}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8EEB59A-2E63-4F14-903E-37DE81B67400}
+	EndGlobalSection
+EndGlobal
