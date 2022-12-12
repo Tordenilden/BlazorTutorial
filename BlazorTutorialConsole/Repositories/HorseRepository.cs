@@ -13,7 +13,7 @@ namespace BlazorTutorialConsole.Repositories
         public void create(Horse horse)
         {
             SqlConnection con = new SqlConnection(Helper.ConnectionString);
-            SqlCommand cmd = new SqlCommand($"Insert into horses values ('{horse.Name}')",con);
+            SqlCommand cmd = new SqlCommand($"Insert into horse values ('{horse.Name}')",con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
@@ -21,7 +21,23 @@ namespace BlazorTutorialConsole.Repositories
         public void createHardcoded()
         {
             SqlConnection con = new SqlConnection(Helper.ConnectionString);
-            SqlCommand cmd = new SqlCommand("Insert into horses values ('beauty')",con);
+            SqlCommand cmd = new SqlCommand("Insert into horse values ('beauty')",con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        /// <summary>
+        /// 1) Minimum 1 Insert
+        /// 2) Minimum 2 Select
+        /// 3) Hvordan var det nu vi beskyttede os mod dem? Er der mere end en mulighed??
+        /// </summary>
+        /// <param name="horse"></param>
+        public void createWithInjection(Horse horse)
+        {
+            string horsename = "'); DELETE FROM test; --";
+            SqlConnection con = new SqlConnection(Helper.ConnectionString);
+            SqlCommand cmd = new SqlCommand($"Insert into horse (name) values ('{horsename}' )", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

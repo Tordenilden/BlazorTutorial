@@ -29,6 +29,9 @@ namespace BlazorTutorial
             HorseRepository horseRepository = new HorseRepository();
             horseRepository.getHorse(1);
 
+            /** INJECTIONS */
+            Horse horse = new Horse() { Name = "FYrsten" };
+            horseRepository.createWithInjection(horse);
 
         }
     }
