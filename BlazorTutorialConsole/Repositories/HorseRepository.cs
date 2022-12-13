@@ -35,9 +35,31 @@ namespace BlazorTutorialConsole.Repositories
         /// <param name="horse"></param>
         public void createWithInjection(Horse horse)
         {
-            string horsename = "'); DELETE FROM test; --";
+            string horsename = "'); truncate table test; --";
             SqlConnection con = new SqlConnection(Helper.ConnectionString);
-            SqlCommand cmd = new SqlCommand($"Insert into horse (name) values ('{horsename}' )", con);
+            SqlCommand cmd = new SqlCommand($"Insert into horse (age, samuraiId, name) values (1, 1,'{horsename}' )", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void createWithInjectionVer2(Horse horse)
+        {
+            SqlConnection con = new SqlConnection(Helper.ConnectionString);
+            SqlCommand cmd = new SqlCommand($"Insert into horse (age, samuraiId, name) " +
+                $"values (1, 1,'{horse.Name}' )", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void createAvoid(Horse horse)
+        {
+            SqlConnection con = new SqlConnection(Helper.ConnectionString);
+            SqlCommand cmd = new SqlCommand($"Insert into horse values (@age, @name, @id)", con);
+            cmd.Parameters.AddWithValue("@age", horse.Age);
+            cmd.Parameters.AddWithValue("@name", horse.Name+"'");
+            cmd.Parameters.AddWithValue("@id", horse.SamuraiId); // foreign key
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

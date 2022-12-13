@@ -30,8 +30,15 @@ namespace BlazorTutorial
             horseRepository.getHorse(1);
 
             /** INJECTIONS */
-            Horse horse = new Horse() { Name = "FYrsten" };
-            horseRepository.createWithInjection(horse);
+            Horse horse = new Horse() { Name = "FYrsten blbaaablabal" };
+            //horseRepository.createWithInjection(horse);
+            int tal = 5;
+            tal = 55;
+            horse = new Horse() { 
+                Name = "'); truncate table test; --", Age=33, SamuraiId=1
+            };
+            horseRepository.createWithInjectionVer2(horse);// sql injection virker
+            horseRepository.createAvoid(horse); // sql injection virker ikke
 
         }
     }
