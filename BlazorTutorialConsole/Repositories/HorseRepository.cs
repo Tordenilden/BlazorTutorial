@@ -86,6 +86,8 @@ namespace BlazorTutorialConsole.Repositories
                 Horse horse = new Horse();
                 horse.Name = reader["Name"].ToString();
                 horse.Id = Convert.ToInt32(reader["Id"]);
+                horse.Age = Convert.ToInt32(reader["Age"]);
+                horse.SamuraiId = Convert.ToInt32(reader["SamuraiId"]);
                 horses.Add(horse);
             }
             con.Close();

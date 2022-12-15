@@ -1,0 +1,49 @@
+﻿@page "/test"
+@inject IHorse _horse
+
+<h3>Test</h3>
+<p>@myString</p>
+<p>@sql[1]</p>
+
+@foreach (var item in sql)
+{
+    <p>@item</p>
+}
+<table>
+    <thead>
+        <tr>
+            <td>Age</td><td>Name</td><td>SamuraiId</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (var horse in horsesList)
+            {
+                <tr>
+                <td>@horse.Age</td>
+                <td>@horse.Name</td>
+                <td>@horse.SamuraiId</td>
+
+                </tr>
+   
+            }
+        
+    </tbody>
+</table>
+
+@code {
+    string myString = "I take a walk";
+    List<string> sql = new List<string>()
+    {
+        "Alex", "Lasse","withmore"
+    };
+    List<Horse> horsesList = new List<Horse>();
+    protected override void OnInitialized()
+    { // this is the first method to be run
+      // I want to load in data from repo. Place it in a variable
+        
+      horsesList = _horse.getAllHorses(); 
+    }
+
+  
+}

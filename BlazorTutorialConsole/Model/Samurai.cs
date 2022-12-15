@@ -8,6 +8,29 @@ namespace BlazorTutorialConsole.Model
 {
     public class Samurai
     {
-       
+        public void create(Horse horse)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void delete(int horseId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Horse> getAllHorses()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Horse getHorse(int horseId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void update(Horse horse)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

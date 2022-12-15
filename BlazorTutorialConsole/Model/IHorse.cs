@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlazorTutorialConsole.Model
 {
-    internal interface IHorse
+    public interface IHorse
     {
         public List<Horse> getAllHorses();
         public Horse getHorse(int horseId);

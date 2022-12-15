@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using BlazorTutorialConsole;
 using BlazorTutorialConsole.Model;
 using BlazorTutorialConsole.Repositories;
 
@@ -40,6 +41,9 @@ namespace BlazorTutorial
             horseRepository.createWithInjectionVer2(horse);// sql injection virker
             horseRepository.createAvoid(horse); // sql injection virker ikke
 
+
+            //HorseRepositoryEF gg = new HorseRepositoryEF(new Horse());
+            //HorseRepositoryEF gg = new HorseRepositoryEF(new Samurai());
         }
     }
 }

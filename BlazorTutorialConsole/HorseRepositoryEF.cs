@@ -31,7 +31,7 @@ public class HorseRepositoryEF
     DatabaseContext context;
     public HorseRepositoryEF(DatabaseContext context)
     {
-        this.context = context;
+        //this.context = context;
     }
 
     // i want to query on the id to the database
