@@ -13,7 +13,8 @@ namespace BlazorTutorialConsole.Repositories
         public void create(Horse horse)
         {
             SqlConnection con = new SqlConnection(Helper.ConnectionString);
-            SqlCommand cmd = new SqlCommand($"Insert into horse values ('{horse.Name}')",con);
+            SqlCommand cmd = new SqlCommand($"Insert into horse (age,name,samuraiId) " +
+                $"values ({horse.Age},'{horse.Name}',{horse.SamuraiId})",con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

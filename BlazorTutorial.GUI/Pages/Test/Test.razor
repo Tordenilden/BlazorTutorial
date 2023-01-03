@@ -23,7 +23,10 @@
                 <td>@horse.Age</td>
                 <td>@horse.Name</td>
                 <td>@horse.SamuraiId</td>
-
+                <td>
+                    <a href="testUpdate/@horse.Id">Update</a> |
+                    <button @onclick="()=>horseDelete(horse)">Delete</button>
+                </td>
                 </tr>
    
             }
@@ -41,9 +44,15 @@
     protected override void OnInitialized()
     { // this is the first method to be run
       // I want to load in data from repo. Place it in a variable
-        
-      horsesList = _horse.getAllHorses(); 
+
+        horsesList = _horse.getAllHorses(); 
+    }
+    public void horseDelete(Horse horse)
+    {
+        // I want to delete the horse - how do I do it?
+        _horse.delete(horse.Id);
+        // If I want to update my page, I have to Navigate to this url again
+        StateHasChanged();
     }
 
-  
 }

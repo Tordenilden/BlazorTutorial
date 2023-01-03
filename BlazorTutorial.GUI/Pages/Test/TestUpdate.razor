@@ -1,0 +1,35 @@
+﻿@page "/EditHorse/{CurrentId}"
+@inject HorseRepository horseRepository
+@inject NavigationManager NavigationManager
+
+<h3>TestUpdate</h3>
+<form>
+    <div class="row">
+        <div class="col-md-8">
+        <label>Name</label>
+        <input class="form-control" @bind="horse.Name" />
+        <label>Age</label>
+        <input class="form-control" @bind="horse.Age" />
+        <label>SamuraiId</label>
+        <input class="form-control" @bind="horse.SamuraiId" />
+        </div>
+    </div>
+    <div class="row">
+        <input type="button" @onclick="@updateHorse" class="btn btn-primary" value="Save" />
+    </div>
+</form>
+@code {
+    [Parameter]
+    public string CurrentId { get; set; }
+
+    Horse horse = new Horse();
+    protected override void OnInitialized()
+    {
+        horse = horseRepository.getHorse(Convert.ToInt32(CurrentId));
+    }
+    public void updateHorse()
+    {
+        horseRepository.update(horse);
+        NavigationManager.NavigateTo("test");
+    }
+}

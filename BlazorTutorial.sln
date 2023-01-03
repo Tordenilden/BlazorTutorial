@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTutorialConsole", "BlazorTutorialConsole\BlazorTutorialConsole.csproj", "{AEA0B07B-4AC7-498B-962E-83BC8ED63980}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTutorial.GUI", "BlazorTutorial.GUI\BlazorTutorial.GUI.csproj", "{EFD56EAD-D943-48C4-81E4-3079807D5200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTutorial.GUI", "BlazorTutorial.GUI\BlazorTutorial.GUI.csproj", "{EFD56EAD-D943-48C4-81E4-3079807D5200}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,4 +10,8 @@
     <ProjectReference Include="..\BlazorTutorialConsole\BlazorTutorialConsole.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Quotes\" />
+  </ItemGroup>
+
 </Project>
